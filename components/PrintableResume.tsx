@@ -6,10 +6,10 @@ export const PrintableResume: React.FC = () => {
   const { personal, skills, experience, education, projects } = resumeData;
 
   return (
-    <div id="resume-print-area" className="bg-white w-[210mm] min-h-[297mm] mx-auto flex text-slate-900 leading-snug shadow-2xl print:w-[210mm] print:h-auto print:absolute print:top-0 print:left-0 print:m-0">
+    <div id="resume-print-area" className="bg-white w-[210mm] min-h-[297mm] mx-auto flex text-slate-900 leading-snug print:w-[210mm] print:h-auto">
       
       {/* Left Sidebar - Graphical & Personal Info */}
-      <div className="w-[32%] bg-slate-100 border-r border-slate-200 p-5 flex flex-col gap-5 print:bg-slate-100 print:p-5 print:h-full">
+      <div className="w-[32%] bg-slate-100 border-r border-slate-200 p-5 flex flex-col gap-5 print:bg-slate-100 print:p-4 print:gap-3 print:h-full">
         
         {/* Photo Area - Passport Style */}
         {/* Standard Passport Size is roughly 35mm x 45mm - aspect ratio ~0.77 */}
@@ -102,9 +102,9 @@ export const PrintableResume: React.FC = () => {
       </div>
 
       {/* Right Main Content */}
-      <div className="w-[68%] p-6 pt-8">
+      <div className="w-[68%] p-6 pt-8 print:p-4 print:pt-4">
         {/* Header */}
-        <div className="mb-6 border-b-2 border-slate-900 pb-4">
+        <div className="mb-6 border-b-2 border-slate-900 pb-4 print:mb-4 print:pb-2">
           <h1 className="text-3xl font-extrabold text-slate-900 uppercase tracking-tight">{personal.name}</h1>
           <h2 className="text-lg text-sky-600 font-bold mt-1">{personal.title}</h2>
           <p className="text-xs text-slate-600 mt-3 text-justify leading-relaxed">{personal.summary}</p>
